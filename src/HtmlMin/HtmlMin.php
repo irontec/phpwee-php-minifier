@@ -58,13 +58,13 @@ class HtmlMin
         }
         $doc->normalizeDocument();
         $textnodes = $xpath->query('//text()');
-        $skip = [
+        $skip = array(
             "style",
             "pre",
             "code",
             "script",
             "textarea"
-        ];
+        );
         foreach ($textnodes as $t) {
             $xp = $t->getNodePath();
             $doskip = false;
